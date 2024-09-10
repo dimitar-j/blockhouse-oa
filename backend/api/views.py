@@ -21,7 +21,7 @@ class CandlestickView(APIView):
             ]
         }
         serializer = CandlestickSerializer(data)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_404)
 
 
 class LineChartView(APIView):
@@ -45,4 +45,4 @@ class PieChartView(APIView):
     def get(self, request):
         data = {"labels": ["Red", "Blue", "Yellow"], "data": [300, 50, 100]}
         serializer = PieChartSerializer(data)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_404)
