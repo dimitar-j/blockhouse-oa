@@ -11,7 +11,13 @@ function NavBar() {
         alt="Blockhouse logo"
         className={styles.logo}
       />
-      <div>Blockhouse</div>
+      <a
+        href="https://blockhouse.app"
+        className={styles.title}
+        target="__blank"
+      >
+        Blockhouse
+      </a>
     </nav>
   );
 }
